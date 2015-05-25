@@ -1,3 +1,6 @@
-$("signup-button").click(function {
-	$("signup-before").css("display", "none");
+$(document).ready(function () {
+	$(".signup-button").click(function () {
+		$(".signup-after").show();
+		$(".signup-before").hide();
+	});
 });

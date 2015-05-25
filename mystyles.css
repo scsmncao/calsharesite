@@ -31,12 +31,16 @@ html {
 	cursor: pointer;
 }
 
-.signup-before h1 {
+.signup-before {
+	padding-top: 300px;
+	transition:opacity .5s linear;
+}
+
+h1 {
 	font-family: Helvetica;
 	font-weight: 300;
 	font-size: 32pt;
 	text-align: center;
-	padding-top: 300px;
 	color: #FFF;
 }
 
@@ -51,6 +55,7 @@ html {
 	height: 50px;
 	margin-left: calc(50% - 100px);
 	color: #FFF;
+	border-radius:5px;
 	transition:.4s;
 }
 
@@ -59,4 +64,28 @@ html {
 	color: #0B0B5E;
 	transition: .4s;
 	cursor: pointer;
+}
+
+.signup-after {
+	position:absolute;
+	text-align: center;
+	margin-top: 200px;
+	margin-left: calc(50% - 300px - 8px);
+	display:none;
+}
+
+.signup-after input {
+	padding:15px;
+	width: 300px;
+	border: solid 1px #dcdcdc;
+	border-radius:5px;
+	margin-bottom: 15px;
+	font-size: 10pt;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.signup-after input:focus {
+	border-radius:5px;
+	border: solid 1px #707070;
+  	box-shadow: 0 0 5px 1px #969696;
 }
