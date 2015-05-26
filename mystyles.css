@@ -6,11 +6,21 @@ html {
   background-size: cover;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+body {
+	font-family: Helvetica;
+}
+
 .nav .logo li {
 	display: inline-block;
 	margin-right: 10px;
 	margin-top: 20px;
-	font-family: Helvetica;
 	color: #FFF;
 	float:left;
 }
@@ -33,7 +43,6 @@ html {
 
 .signup-before {
 	padding-top: 300px;
-	transition:opacity .5s linear;
 }
 
 h1 {
@@ -56,7 +65,7 @@ h1 {
 	margin-left: calc(50% - 100px);
 	color: #FFF;
 	border-radius:5px;
-	transition:.4s;
+	transition: background .4s;
 }
 
 .signup-button:hover {
@@ -74,7 +83,7 @@ h1 {
 	display:none;
 }
 
-.signup-after input {
+input {
 	padding:15px;
 	width: 300px;
 	border: solid 1px #dcdcdc;
@@ -84,8 +93,38 @@ h1 {
 	transition: box-shadow 0.3s, border 0.3s;
 }
 
-.signup-after input:focus {
+input:focus {
 	border-radius:5px;
 	border: solid 1px #707070;
   	box-shadow: 0 0 5px 1px #969696;
+}
+
+.login {
+	position: absolute;
+	background: #FFF;
+	width: 300px;
+	height: 185px;
+	padding: 10px;
+	border-radius:10px;
+	margin-left: calc(75% - 10px);
+	margin-top: 50px;
+	transition:opacity .3s linear;
+	opacity: 0;
+}
+
+#login-button {
+	border: 2px solid #0B0B5E;
+	height: 50px;
+	width: 150px;
+	text-align:center;
+	margin-left: calc(50% - 75px);
+	border-radius:5px;
+	transition: .4s;
+}
+
+#login-button:hover {
+	background: #0B0B5E;
+	color: #FFF;
+	transition: .4s;
+	cursor: pointer;
 }
