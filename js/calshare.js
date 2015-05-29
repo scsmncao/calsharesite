@@ -11,11 +11,15 @@ $(document).ready(function () {
 
 	$("#login-status").click(function () {
 		if (loginstatus) {
-			$(".login").css("opacity", "0");
+			$(".login").hide();
 		}
 		else {
-			$(".login").css("opacity", "100");
+			$(".login").show();
 		}
 		loginstatus = !loginstatus;
+	});
+
+	$("#signup").click(function () {
+		window.location = 'map.html';
 	});
 });

@@ -1,4 +1,4 @@
-html { 
+#index { 
   background: url(images/sathergate.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,28 +13,50 @@ html {
   -o-transition: none !important;
 }
 
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
 body {
 	font-family: Helvetica;
 }
 
-.nav .logo li {
+.logo-art {
+	width: 100px;
+}
+
+#fixed-logo {
+	position:fixed;
+	z-index: 2;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.nav li {
 	display: inline-block;
-	margin-right: 10px;
 	margin-top: 20px;
-	color: #FFF;
+}
+
+.logo li {
+	margin-right: 10px;
 	float:left;
 }
 
-.nav .links li {
-	display: inline-block;
-	float: right;
+.links li {
 	margin-right: 40px;
-	margin-top: 20px;
-	font-family: Helvetica;
+	float: right;
+}
+
+#index-logo li {
 	color: #FFF;
 }
 
-.nav .links li:hover {
+#index-links li {
+	color: #FFF;
+}
+
+#index-links li:hover {
 	-webkit-transition: 0.3s ease;
             transition: 0.3s ease;
 	border-bottom: 1px solid #FFF;
@@ -85,7 +107,7 @@ h1 {
 
 input {
 	padding:15px;
-	width: 300px;
+	width: 270px;
 	border: solid 1px #dcdcdc;
 	border-radius:5px;
 	margin-bottom: 15px;
@@ -103,13 +125,12 @@ input:focus {
 	position: absolute;
 	background: #FFF;
 	width: 300px;
-	height: 185px;
+	height: 180px;
 	padding: 10px;
 	border-radius:10px;
 	margin-left: calc(75% - 10px);
 	margin-top: 50px;
-	transition:opacity .3s linear;
-	opacity: 0;
+	display:none;
 }
 
 #login-button {
@@ -127,4 +148,41 @@ input:focus {
 	color: #FFF;
 	transition: .4s;
 	cursor: pointer;
+}
+
+html, body, #map-canvas {
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	transition: width .4s;
+}
+
+#search-button {
+	position:absolute;
+	z-index:1;
+	height: 50px;
+	width: 100px;
+	background: black;
+	margin-left: calc(100% - 75px);
+	margin-top: 100px;
+	cursor:pointer;
+	color: white;
+	border-radius: 5px 5px 0px 0px;
+	-ms-transform:rotate(270deg); /* IE 9 */
+	-moz-transform:rotate(270deg); /* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari and Chrome */
+	-o-transform:rotate(270deg); /* Opera */
+	transition: .4s;
+}
+
+#search-button p {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#search {
+	position: absolute;
+	margin-left: calc(100% - 270px - 30px - 15px);
+	margin-top: 15px;
 }
